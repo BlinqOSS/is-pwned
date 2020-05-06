@@ -1,6 +1,6 @@
 {
   "name": "is-pwned",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "is-pwned — Utility to safely check the HaveIBeenPwned \"Pwned Passwords\" database in the browser.",
   "main": "dist/index.js",
   "scripts": {
