@@ -1,4 +1,4 @@
-interface IIsPwnedConfig {
+interface IsPwnedConfig {
   endpoint?: string;
   timeout?: number;
   userAgent?: string;
@@ -212,7 +212,7 @@ export default class IsPwned {
   timeout: number;
   resolveOnTimeout: boolean;
 
-  constructor(config: IIsPwnedConfig = {}) {
+  constructor(config: IsPwnedConfig = {}) {
     if (typeof window === 'undefined') {
       throw new Error('IsPwned is meant for use in the browser only.');
     }
