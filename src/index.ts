@@ -231,16 +231,16 @@ export default class IsPwned {
   public async check(password: string) {
     const hashedPassword = this.hashPassword(password);
 
-    const firstFiveOfPassword = hashedPassword.substr(0, 5);
-    const remainderOfPassword = hashedPassword.substr(5);
+    const firstFiveOfPassword = hashedPassword.substring(0, 5);
+    const remainderOfPassword = hashedPassword.substring(5);
 
     const breaches = (await this.makeRequest(firstFiveOfPassword))
       .split('\n')
-      .filter(hs => hs.indexOf(remainderOfPassword) > -1);
+      .filter((hs) => hs.indexOf(remainderOfPassword) > -1);
 
     if (breaches.length > 0) {
       throw new BreachedError(
-        breaches.map(v => parseInt(v.split(':')[1])).reduce((v, t) => v + t)
+        breaches.map((v) => parseInt(v.split(':')[1])).reduce((v, t) => v + t)
       );
     }
 
@@ -263,8 +263,8 @@ export default class IsPwned {
     const response = await fetch(this.endpoint + firstFiveOfHash, {
       signal: abortController ? abortController.signal : undefined,
       headers: {
-        'User-Agent': this.userAgent
-      }
+        'User-Agent': this.userAgent,
+      },
     });
     clearTimeout(timer);
 
