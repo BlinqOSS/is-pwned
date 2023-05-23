@@ -7,6 +7,12 @@
     "build": "rm -rf dist && tsc",
     "test": "jest ./test/index.test.ts"
   },
+  "release": {
+    "branches": [
+      "main",
+      "next"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/seek-oss/is-pwned.git"
