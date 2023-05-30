@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seek-oss/is-pwned.git"
+    "url": "git+https://github.com/BlinqOSS/is-pwned.git"
   },
   "keywords": [],
-  "author": "Will Hackett <whackett@seek.com.au>",
+  "author": "Will Hackett <blinq@willhackett.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/seek-oss/is-pwned/issues"
+    "url": "https://github.com/BlinqOSS/is-pwned/issues"
   },
-  "homepage": "https://github.com/seek-oss/is-pwned#readme",
+  "homepage": "https://github.com/BlinqOSS/is-pwned#readme",
   "types": "dist/index.d.ts",
   "devDependencies": {
     "@types/jest": "^25.2.1",
